@@ -1,15 +1,13 @@
-def Tobig(a):
-    if a == 2 or a == 3 :
-        return True
-    if a%2 == 0 or a < 2 :
-        return False
-    for n in range(3, int(a) ,1):
-        if a%n!=0: 
-          return True
-        return False
-
-x, y = [int(x) for x in input().split()]
-if x%2==0 and y<500 and Tobig(x):
-    print('Good job!')
-else :
-    print('Try next time!')
+from math import sqrt
+txt=str(input())
+dist=int(txt.split()[0])
+n=int(txt.split()[1])
+def isprime(n):
+   for i in range(2,int(sqrt(n))+1):
+       if n%i==0:
+           return False
+   return  True
+if isprime(dist) and dist<500 and n%2==0:
+   print("Good job!")
+else:
+   print("Try next time!"))
