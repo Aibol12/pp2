@@ -1,1 +1,122 @@
 
+1)def oun(g):
+    a=float
+    a=int(g)*28.3495231
+    return a
+
+print('Enter grams: ')
+g=input()
+print(oun(g))
+
+2)def g(n):
+     c=float((5/9)*(n-32))
+     return c
+     
+n=float(input())
+print (g(n))
+
+3)line=input().split()
+heads=int(line[0])
+legs=int(line[1])
+
+def do(heads, legs):
+    allheads=heads*2
+    alllegs=legs-allheads
+    rabbit=alllegs/2
+    return rabbit
+
+rabits=int(do(heads, legs))
+chikens=heads-rabits
+print(rabits, chikens)
+
+4)
+def PP(num):
+    for i in range(2, int(num)):
+        if num%i==0:
+            return False
+    return True
+
+nums=input().split()
+lst=[]
+st=[]
+for i in nums:
+    if i!='1':
+        lst.append(int(i))
+    else:
+        pass
+for i in lst:
+    if PP(i):
+        st.append(i)
+
+print(*st)
+
+6)def t(text):
+    for i in range(len(text)-1, -1, -1):
+        lst.append(text[i])
+    return lst
+
+text=input().split()
+lst=[]
+print(*t(text))
+
+
+7)
+def ab(lst):
+    for i in range(len(lst)):
+        if lst[i] == '3' and lst[i+1]=='3':
+            return True
+    return False 
+
+n=input().split()
+lst=[]
+for i in n:
+    lst.append(i)
+print(ab(lst))
+
+
+8)
+
+def abc(lst):
+    for i in range(len(lst)):
+        if lst[i] == '0' or lst[i]=='7':
+            st.append(lst[i])
+    if st[0]=='0' and st[1]=='0' and st[2]=='7':
+            return True
+    return False 
+
+n=input().split()
+lst=[]
+st=[]
+for i in n:
+    lst.append(i)
+print(abc(lst))
+
+9)
+from cmath import pi
+
+def volume(n):
+    v=(4*n**3*pi)/3
+    return v
+
+n=int(input())
+print(volume(n))
+
+10)from collections import Counter 
+
+def unique(lst):
+    print(*Counter(lst))
+
+arr=list(map(int, input().split()))
+unique(arr)
+
+
+12)def histogram(n):
+    for i in n:
+        for j in range(i):
+            lst.append('*')
+        print(*lst)
+        lst.clear()
+
+lst=[]
+n=list(map(int, input().split()))
+histogram(n)
