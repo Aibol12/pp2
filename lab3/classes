@@ -1,1 +1,116 @@
+1)class stringer:
+    def __init__(self, string):
+       self.string = ""
+    def getString(self):
+        self.string = str(input())
+    def printString(self):
+        print(self.string.upper())
 
+s = stringer
+
+s.getString(s)
+s.printString(s) 
+
+2)class Square:
+    def __init__(self, length ):
+        self.length  = length
+
+    def area (self):
+        print(self.length * self.length == 0)  
+
+class Shape(Square):
+    def __init__(self, length = 0 ):
+        self.length  = length
+    
+    def area (self) :
+        print(self.length * self.length)      
+  
+  3)class Square:
+    def __init__(self, length ):
+        self.length  = length
+
+    def area (self):
+        print('Area of the square:',self.length * self.length == 0)  
+
+class Shape(Square):
+    def __init__(self, length = 0 ):
+        self.length  = length
+    
+    def area (self) :
+        print('Area of the square:',self.length * self.length)        
+
+class Rectangle(Shape):
+
+    def __init__(self,  width):
+        self.width = width
+
+    def area (self, w):
+        print( 'Area of the rectangle:',self.length  * w)  
+        
+
+
+x = 7
+y = 3
+z = Square(x)
+Shape.area(z)
+
+Rectangle.area(z,y)
+
+4)import math
+
+class point:
+    def __init__(self, x = 3  , y = 7 ):
+        self.x  = x
+        self.y  = y
+
+    def show(self):
+        print('Coordinates:',f'{self.x}'+ ' '+ f'{self.y}')
+
+    def move(self, x , y):
+        self.x = x
+        self.y = y
+        print('Fresh coordinates:',self.x,self.y)
+
+    def dist(self,x,y):
+        d = math.sqrt(pow((self.x - x),2) + pow((self.y - y),2))
+        print('Distance between two points:',d)
+
+p = point()
+p.show()
+
+p.move(2 , 4)
+
+k = point(1 , 2)
+
+k.show()
+p.show()
+
+p.dist(5,9)
+
+
+5)class bank12:
+    def __init__(self, owner  , balance = 0 ):
+        self.owner  = owner
+        self.balance  = balance
+    def addition(self, add):
+        self.balance = self.balance+add
+        print('balance of',self.owner,':',self.balance)
+    def denote(self,min):
+        if min > self.balance:
+            print("lack of cash!")
+        else:
+            self.balance = self.balance - min
+            print('balance of',self.owner,':',self.balance)
+
+
+
+f = bank12('AZ',2000)
+f.addition(500)
+f.denote(2499)
+
+
+s = bank12('AB', 50)
+s.addition(1000)
+s.denote(50)
+s.addition(50000)
+s.denote(51001)
