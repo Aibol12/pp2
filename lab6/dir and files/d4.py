@@ -1,4 +1,4 @@
-a = open('ex.txt', 'r')
+a = open('a.txt', 'r')
 
 cmd = 0
 for i in a.readlines():
