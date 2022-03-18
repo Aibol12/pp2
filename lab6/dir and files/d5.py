@@ -1,4 +1,4 @@
-with open('ex.txt', 'w') as f:
+with open('a.txt', 'w') as f:
     while True:
         x = input()
         if x == '0':
