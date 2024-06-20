@@ -1,6 +1,6 @@
-car =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-car["year"] = 2020
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
+        
